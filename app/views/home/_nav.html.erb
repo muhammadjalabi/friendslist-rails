@@ -9,31 +9,47 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-      	<%= link_to 'About Us', home_about_path, 
-		class: 'nav-link' %>
-		<!-- Regarding the "home_about_path" or the
-		"root_path" in the link_to's:
+      	<%= link_to 'About Us', home_about_path, class: 'nav-link' %>
+  		<!-- Regarding the "home_about_path" or the
+  		"root_path" in the link_to's:
 
-		If you are unsure on how to target the correct reference, run command:
-		rails routes
-		
-		and you will see "home_about" GET
-		"root" GET
-		etc (under Prefix Verb).
+  		If you are unsure on how to target the correct reference, run command:
+  		rails routes
+  		
+  		and you will see "home_about" GET
+  		"root" GET
+  		etc (under Prefix Verb).
 
-		These are what you need to look for, and suffix with _path 
+  		These are what you need to look for, and suffix with _path 
 
-		 -->
+  		 -->
       </li>
 
-		<li class="nav-item">
-      	<%= link_to 'Friends List', friendlists_path, 
-		class: 'nav-link' %>
+  		<li class="nav-item">
+        <%= link_to 'Friends List', friendlists_path, class: 'nav-link' %>
       </li>
-      		<li class="nav-item">
-      	<%= link_to 'Add friend', new_friendlist_path, 
-		class: 'nav-link' %>
-      </li>
+
+
+
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Add friend', new_friendlist_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Edit profile', edit_user_registration_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">  
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <!-- unless user is signed in -->
+          <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+        </li>
+      <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
