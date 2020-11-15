@@ -18,11 +18,12 @@
   <body>
     <%= render 'home/nav' %>
     <div class="container">
+    <%if notice %>  
+    <br />
+        <%= render 'layouts/alerts' %>
+    <% end %>
     <%= yield %>
-      <footer>      
-      <p>footer here</p>
-    </footer>
-
+    <%= render 'home/footer' %>
     </div>
 
   

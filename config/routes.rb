@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :friendlists
   #get 'home/index'
   get 'home/about'
 

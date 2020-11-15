@@ -7,8 +7,31 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+
       <li class="nav-item">
       	<%= link_to 'About Us', home_about_path, 
+		class: 'nav-link' %>
+		<!-- Regarding the "home_about_path" or the
+		"root_path" in the link_to's:
+
+		If you are unsure on how to target the correct reference, run command:
+		rails routes
+		
+		and you will see "home_about" GET
+		"root" GET
+		etc (under Prefix Verb).
+
+		These are what you need to look for, and suffix with _path 
+
+		 -->
+      </li>
+
+		<li class="nav-item">
+      	<%= link_to 'Friends List', friendlists_path, 
+		class: 'nav-link' %>
+      </li>
+      		<li class="nav-item">
+      	<%= link_to 'Add friend', new_friendlist_path, 
 		class: 'nav-link' %>
       </li>
     </ul>

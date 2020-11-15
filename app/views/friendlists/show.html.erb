@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @friendlist.first_name %>
+    <%= @friendlist.last_name %>    
+  </h1>
+  <p class="lead">
+  <strong>Email:</strong>
+  <%= @friendlist.email %>
+</p>
+
+<p class="lead">
+  <strong>Phone:</strong>
+  <%= @friendlist.phone %>
+</p>
+
+<p class="lead">
+  <strong>Twitter:</strong>
+  <%= @friendlist.twitter %>
+</p>
+
+  <hr class="my-4">
+  <p class="lead">Actions:</p>
+  <%= link_to 'Edit', edit_friendlist_path(@friendlist), class: 'btn btn-warning' %> 
+<%= link_to 'Back', friendlists_path, class: 'btn btn-dark' %>
+</div>
+
+
+
