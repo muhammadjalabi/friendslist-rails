@@ -1,5 +1,5 @@
 {
-  "name": "friendslist_rails",
+  "name": "contact_rails",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

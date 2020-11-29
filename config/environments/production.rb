@@ -58,7 +58,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "friendslist_rails_production"
+  # config.active_job.queue_name_prefix = "contact_rails_production"
 
   config.action_mailer.perform_caching = false
 
@@ -110,6 +110,6 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  ##Should be production host when ready:) 
+  ##Should be production host when ready:)
   #   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

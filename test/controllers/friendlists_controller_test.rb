@@ -1,48 +1,48 @@
 require 'test_helper'
 
-class FriendlistsControllerTest < ActionDispatch::IntegrationTest
+class ContactControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @friendlist = friendlists(:one)
+    @contact = contacts(:one)
   end
 
   test "should get index" do
-    get friendlists_url
+    get contacts_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_friendlist_url
+    get new_contact_url
     assert_response :success
   end
 
-  test "should create friendlist" do
-    assert_difference('Friendlist.count') do
-      post friendlists_url, params: { friendlist: { email: @friendlist.email, first_name: @friendlist.first_name, last_name: @friendlist.last_name, phone: @friendlist.phone, twitter: @friendlist.twitter } }
+  test "should create contact" do
+    assert_difference('Contact.count') do
+      post contacts_url, params: { contact: { email: @contact.email, first_name: @contact.first_name, last_name: @contact.last_name, phone: @contact.phone, twitter: @contact.twitter } }
     end
 
-    assert_redirected_to friendlist_url(Friendlist.last)
+    assert_redirected_to contact_url(Contact.last)
   end
 
-  test "should show friendlist" do
-    get friendlist_url(@friendlist)
+  test "should show contact" do
+    get contact_url(@contact)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_friendlist_url(@friendlist)
+    get edit_contact_url(@contact)
     assert_response :success
   end
 
-  test "should update friendlist" do
-    patch friendlist_url(@friendlist), params: { friendlist: { email: @friendlist.email, first_name: @friendlist.first_name, last_name: @friendlist.last_name, phone: @friendlist.phone, twitter: @friendlist.twitter } }
-    assert_redirected_to friendlist_url(@friendlist)
+  test "should update contact" do
+    patch contact_url(@contact), params: { contact: { email: @contact.email, first_name: @contact.first_name, last_name: @contact.last_name, phone: @contact.phone, twitter: @contact.twitter } }
+    assert_redirected_to contact_url(@contact)
   end
 
-  test "should destroy friendlist" do
-    assert_difference('Friendlist.count', -1) do
-      delete friendlist_url(@friendlist)
+  test "should destroy contact" do
+    assert_difference('Contact.count', -1) do
+      delete contact_url(@contact)
     end
 
-    assert_redirected_to friendlists_url
+    assert_redirected_to contacts_url
   end
 end

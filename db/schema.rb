@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_11_15_155055) do
 
-  create_table "friendlists", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"

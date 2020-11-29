@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<%= link_to 'Friendlist App', root_path, 
+	<%= link_to 'Contact App', root_path,
 		class: 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,28 +15,28 @@
 
   		If you are unsure on how to target the correct reference, run command:
   		rails routes
-  		
+
   		and you will see "home_about" GET
   		"root" GET
   		etc (under Prefix Verb).
 
-  		These are what you need to look for, and suffix with _path 
+  		These are what you need to look for, and suffix with _path
 
   		 -->
       </li>
-            
+
 
   		<li class="nav-item">
-        <%= link_to 'Friends List', friendlists_path, class: 'nav-link' %>
+        <%= link_to 'Friends List', contacts_path, class: 'nav-link' %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to 'Add friend', new_friendlist_path, class: 'nav-link' %>
+          <%= link_to 'Add friend', new_contact_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to 'Edit profile', edit_user_registration_path, class: 'nav-link' %>
         </li>
-        <li class="nav-item">  
+        <li class="nav-item">
           <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
         </li>
       <% else %>
@@ -48,7 +48,7 @@
           <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
         </li>
       <% end %>
-    
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

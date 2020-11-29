@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @contact.first_name %>
+    <%= @contact.last_name %>
+  </h1>
+  <p class="lead">
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p class="lead">
+  <strong>Phone:</strong>
+  <%= @contact.phone %>
+</p>
+
+<p class="lead">
+  <strong>Twitter:</strong>
+  <%= @contact.twitter %>
+</p>
+
+  <hr class="my-4">
+  <p class="lead">Actions:</p>
+  <%= link_to 'Edit', edit_contact_path(@contact), class: 'btn btn-warning' %>
+<%= link_to 'Back', contacts_path, class: 'btn btn-dark' %>
+</div>
+
+
+
